@@ -24,7 +24,7 @@ public class Shake : MonoBehaviour
             ifShake = false;
             StartShake(magnitudeStages[stage], 0.05f, 5f);
         }
-        Debug.Log(stage);
+        //Debug.Log(stage);
     }
     public void StartShake(float magnitude, float update, float duration)
     {
