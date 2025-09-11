@@ -21,6 +21,7 @@ public class Up : MonoBehaviour
     private void Update()
     {
         Delete();
+        Fail();
     }
 
     private void Delete()
@@ -29,6 +30,14 @@ public class Up : MonoBehaviour
         {
             Destroy(gameObject);
             bottle.breakProgress += 0.1f;
+        }
+    }
+
+    private void Fail()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            bottle.breakProgress -= 0.1f;
         }
     }
 

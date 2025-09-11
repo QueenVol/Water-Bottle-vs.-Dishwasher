@@ -46,7 +46,7 @@ public class Shake : MonoBehaviour
             elapsed += update;
         }
 
-        stage = Random.Range(0, 4);
+        stage = Random.Range(0, 6);
         ifShake = true;
         transform.localPosition = startPos;
     }

@@ -20,6 +20,7 @@ public class NewBehaviourScript : MonoBehaviour
     private void Update()
     {
         Delete();
+        Fail();
     }
 
     private void Delete()
@@ -28,6 +29,14 @@ public class NewBehaviourScript : MonoBehaviour
         {
             Destroy(gameObject);
             bottle.breakProgress += 0.1f;
+        }
+    }
+
+    private void Fail()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            bottle.breakProgress -= 0.1f;
         }
     }
 
