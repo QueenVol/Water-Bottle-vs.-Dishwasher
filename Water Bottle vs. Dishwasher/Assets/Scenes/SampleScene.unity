@@ -837,6 +837,7 @@ MonoBehaviour:
   down: {fileID: 286444923378983342, guid: cbc9e0f33d73d0f4994e2bf7a003a084, type: 3}
   left: {fileID: 6495505548865681747, guid: 750e564745161734d8c332f294b0fad7, type: 3}
   right: {fileID: 1625134322716557210, guid: 49ebe45a308f254408757c4e3da45f53, type: 3}
+  shake: {fileID: 1380428426}
 --- !u!1 &2048507298
 GameObject:
   m_ObjectHideFlags: 0
