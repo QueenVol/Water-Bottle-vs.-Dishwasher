@@ -13,7 +13,7 @@ public class Shake : MonoBehaviour
     private void Start()
     {
         startPos = transform.localPosition;
-        StartShake(magnitudeStages[stage], 0.05f, 5f);
+        StartShake(magnitudeStages[stage], 0.05f, 3f);
     }
 
     // Update is called once per frame

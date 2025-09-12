@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Right : MonoBehaviour
 {
     [SerializeField] private Bottle bottle;
-    [SerializeField] private float lifeTime = 5f;
+    [SerializeField] private float lifeTime;
 
     private void Awake()
     {
@@ -21,6 +21,11 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Delete();
         Fail();
+    }
+
+    public void SetLifeTime(float time)
+    {
+        lifeTime = time;
     }
 
     private void Delete()

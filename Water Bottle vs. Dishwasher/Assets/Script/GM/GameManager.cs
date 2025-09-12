@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
     {
         float spawnRate = GetSpawnRate(shake.stage);
 
+        if (float.IsInfinity(spawnRate))
+        {
+            return;
+        }
+
         spawnTime -= Time.deltaTime;
         if (spawnTime <= 0f)
         {
@@ -52,7 +57,31 @@ public class GameManager : MonoBehaviour
         }
 
         if (prefab != null)
-            Instantiate(prefab, GetRandomScreenPosition(), prefab.transform.rotation);
+        {
+            GameObject obj = Instantiate(prefab, GetRandomScreenPosition(), prefab.transform.rotation);
+
+            Up upArrow = obj.GetComponent<Up>();
+            Down downArrow = obj.GetComponent<Down>();
+            Left leftArrow = obj.GetComponent<Left>();
+            Right rightArrow = obj.GetComponent<Right>();
+
+            if (upArrow != null)
+            {
+                upArrow.SetLifeTime(GetSpawnRate(shake.stage));
+            }
+            else if (downArrow != null)
+            {
+                downArrow.SetLifeTime(GetSpawnRate(shake.stage));
+            }
+            else if (leftArrow != null)
+            {
+                leftArrow.SetLifeTime(GetSpawnRate(shake.stage));
+            }
+            else if (rightArrow != null)
+            {
+                rightArrow.SetLifeTime(GetSpawnRate(shake.stage));
+            }
+        }
     }
 
     private float GetSpawnRate(int stage)
@@ -60,7 +89,7 @@ public class GameManager : MonoBehaviour
         switch (stage)
         {
             case 0: 
-                return 3f;
+                return Mathf.Infinity;
             case 1: 
                 return 2.5f;
             case 2: 

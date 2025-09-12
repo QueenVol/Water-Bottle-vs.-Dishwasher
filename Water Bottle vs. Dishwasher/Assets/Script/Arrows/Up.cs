@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Up : MonoBehaviour
 {
     [SerializeField] private Bottle bottle;
-    [SerializeField] private float lifeTime = 5f;
+    [SerializeField] private float lifeTime;
 
     private void Awake()
     {
@@ -22,6 +22,11 @@ public class Up : MonoBehaviour
     {
         Delete();
         Fail();
+    }
+
+    public void SetLifeTime(float time)
+    {
+        lifeTime = time;
     }
 
     private void Delete()

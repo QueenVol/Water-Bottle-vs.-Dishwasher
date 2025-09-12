@@ -16,6 +16,10 @@ public class Bottle : MonoBehaviour
     private void Update()
     {
         Debug.Log(breakProgress);
+        if(breakProgress > 1f )
+        {
+            breakProgress = 1f;
+        }
         slider.value = breakProgress;
     }
 }
