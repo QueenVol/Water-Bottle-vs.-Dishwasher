@@ -937,6 +937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakProgress: 1
   slider: {fileID: 1492860865}
+  brokenBottle: {fileID: 21300000, guid: 18a99db4e99fcf64ebf37dc2d014dada, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
