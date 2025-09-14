@@ -41,6 +41,7 @@ public class Left : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
+            Destroy(gameObject);
             bottle.breakProgress -= 0.1f;
         }
     }
